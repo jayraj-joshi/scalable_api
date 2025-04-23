@@ -9,18 +9,18 @@ class Question(models.Model):
     )
 
     question_id = models.BigAutoField(primary_key=True)
-    user = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='questions')
     questions = models.JSONField()  
     difficulty = models.CharField(choices=DIFFICULTY, max_length=10)
     attempted_by = models.PositiveIntegerField(default=0)   
     type = models.CharField(max_length=50)   
     topic = models.CharField(max_length=100)   
+    chapter_name = models.CharField(max_length=100,null=True)   
 
     def __str__(self):
         return f"{self.topic} - {self.difficulty}"
 
 
-class Answer(models.Model):
+class questions_user(models.Model):
     user = models.ForeignKey(UserModel, on_delete=models.CASCADE, related_name='answers')
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='answers')
     given_answer = models.TextField()
