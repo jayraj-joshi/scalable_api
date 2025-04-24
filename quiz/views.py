@@ -5,7 +5,7 @@ from quiz.models import Question, questions_user
 from user.models import UserModel
 import random
 
-class GetFilteredQuestionsAPIView(APIView):
+class Generate_questions(APIView):
     def get(self, request):
         user_id = request.GET.get('user_id')
         chapters = request.GET.get('chapter_name')
