@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'atom_rank.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',        # Database name
+        'NAME': 'Atomrank',        # Database name
         'USER': 'postgres',        # PostgreSQL username
-        'PASSWORD': '#Post_2082005',        # Your password for PostgreSQL
+        'PASSWORD': '9561',        # Your password for PostgreSQL
         'HOST': 'localhost',       # Use 'localhost' if local
         'PORT': '5432',            # Default PostgreSQL port
     }
