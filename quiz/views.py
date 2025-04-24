@@ -75,7 +75,7 @@ def background_task(user, question_ids, topics):
 
 
 
-class GetFilteredQuestionsAPIView(APIView):
+class Generate_questions(APIView):
     def get(self, request):
         user_id = request.GET.get('user_id')
         chapters = request.GET.get('chapter_name')

@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import GetFilteredQuestionsAPIView
+from .views import Generate_questions
 
 urlpatterns = [
-    path('get-questions/', GetFilteredQuestionsAPIView.as_view(), name='get-questions'),
+    path('get-questions/', Generate_questions.as_view(), name='get-questions'),
 ]
